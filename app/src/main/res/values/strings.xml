@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TestApp</string>
+
+    <string name="search">Поиск</string>
+    <string name="favourite">Избранное</string>
+    <string name="responses">Отклики</string>
+    <string name="messages">Сообщения</string>
+    <string name="profile">Профиль</string>
 </resources>

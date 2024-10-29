@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="more_vacancies">Еще %1$s вакансии</string>
+    <string name="response">Откликнуться</string>
+    <string name="search_query_hint">Должность, ключевые слова</string>
+    <string name="vacancies_title">Вакансии для вас</string>
+</resources>

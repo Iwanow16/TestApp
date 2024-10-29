@@ -22,6 +22,7 @@ dependencyResolutionManagement {
 rootProject.name = "TestApp"
 include(":app")
 include(":features:search")
-include(":features:favorites")
+include(":features:favourites")
 include(":data")
 include(":domain")
+include(":core:ui-kit")
