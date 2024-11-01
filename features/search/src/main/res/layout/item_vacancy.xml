@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="16dp"
     app:cardCornerRadius="8dp"
-    tools:context=".SearchFragment"
+    tools:context=".presentation.ui.VacancyMainFragment"
     tools:theme="@style/Theme.TestApp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,10 +15,11 @@
 
         <TextView
             android:id="@+id/viewers_count"
+            style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/green"
-            android:textSize="14sp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Сейчас просматривает 1 человек" />
@@ -37,31 +36,31 @@
 
         <TextView
             android:id="@+id/position_title"
+            style="@style/Title3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="20sp"
+            android:layout_marginTop="8dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewers_count"
+            app:layout_goneMarginTop="0dp"
             tools:text="UI/UX Designer" />
 
         <TextView
             android:id="@+id/location"
+            style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/position_title"
             tools:text="Минск" />
 
         <TextView
             android:id="@+id/company_name"
+            style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/location"
             tools:text="Мобирикс" />
@@ -90,10 +89,10 @@
 
         <TextView
             android:id="@+id/experience"
+            style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@id/experience_icon"
             app:layout_constraintStart_toEndOf="@id/experience_icon"
             app:layout_constraintTop_toTopOf="@id/experience_icon"
@@ -101,11 +100,11 @@
 
         <TextView
             android:id="@+id/publication_date"
+            style="@style/Text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="@color/grey_4"
-            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/grey_3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/experience"
             tools:text="Опубликовано 20 февраля" />
