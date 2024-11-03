@@ -6,9 +6,9 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import ru.ivanov23.base.adapter.base.AdapterDelegate
 import ru.ivanov23.base.adapter.base.DelegateItem
-import ru.ivanov23.base.databinding.ItemVacancyBinding
 import ru.ivanov23.base.adapter.utils.convertDateToText
 import ru.ivanov23.base.adapter.utils.getHumanCountText
+import ru.ivanov23.base.databinding.ItemVacancyBinding
 import ru.ivanov23.ui_kit.models.VacancyUi
 
 class VacancyDelegate(

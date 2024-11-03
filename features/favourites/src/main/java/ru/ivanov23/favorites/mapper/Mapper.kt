@@ -1,6 +1,5 @@
 package ru.ivanov23.favorites.mapper
 
-import ru.ivanov23.base.adapter.base.DelegateItem
 import ru.ivanov23.domain.models.Vacancy
 import ru.ivanov23.ui_kit.models.VacancyUi
 

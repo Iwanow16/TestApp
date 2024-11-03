@@ -9,8 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import by.kirich1409.viewbindingdelegate.viewBinding
 import kotlinx.coroutines.launch
-import ru.ivanov23.base.adapter.mapper.toDelegateItem
-import ru.ivanov23.base.adapter.utils.getVacancyCountText
 import ru.ivanov23.favorites.presentation.fragments.FavoriteFragment
 import ru.ivanov23.messages.MessagesFragment
 import ru.ivanov23.profile.ProfileFragment

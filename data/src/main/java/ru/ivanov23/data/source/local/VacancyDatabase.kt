@@ -2,7 +2,6 @@ package ru.ivanov23.data.source.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 import ru.ivanov23.data.source.local.dao.VacancyDao
 import ru.ivanov23.data.source.local.entity.OfferEntity

@@ -2,9 +2,6 @@ package ru.ivanov23.data.source.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import ru.ivanov23.domain.models.Address
-import ru.ivanov23.domain.models.Experience
-import ru.ivanov23.domain.models.Salary
 
 @Entity(tableName = "vacancies")
 data class VacancyEntity(
