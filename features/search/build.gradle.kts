@@ -37,9 +37,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:common"))
     implementation(project(":core:ui-kit"))
-    implementation(project(":core:base"))
+    implementation(project(":core:adapter-delegate"))
     implementation(project(":domain"))
 
     implementation(libs.dagger)

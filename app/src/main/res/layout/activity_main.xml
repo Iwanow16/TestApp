@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:name="ru.ivanov23.search.presentation.ui.VacancyMainFragment"
+        android:name="ru.ivanov23.search.presentation.fragments.SearchFragment"
         android:id="@+id/main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

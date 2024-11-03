@@ -4,21 +4,25 @@ import androidx.annotation.RestrictTo
 import androidx.lifecycle.ViewModel
 import dagger.Component
 import ru.ivanov23.domain.repository.VacancyRepository
-import ru.ivanov23.search.presentation.ui.VacancyMainFragment
+import ru.ivanov23.search.presentation.fragments.SearchFragment
+import ru.ivanov23.search.presentation.fragments.VacancyListFragment
+import ru.ivanov23.search.presentation.fragments.VacancyMainFragment
 import ru.ivanov23.search.presentation.viewmodel.SearchModelFactory
 import javax.inject.Scope
 import kotlin.properties.Delegates.notNull
 
 @SearchScope
-@Component(dependencies = [RepositoryDeps::class])
+@Component(dependencies = [SearchDeps::class])
 interface SearchComponent {
 
     @Component.Factory
     interface Factory {
-        fun create(repository: RepositoryDeps): SearchComponent
+        fun create(repository: SearchDeps): SearchComponent
     }
 
+    fun inject(fragment: SearchFragment)
     fun inject(fragment: VacancyMainFragment)
+    fun inject(fragment: VacancyListFragment)
 
     fun viewModelFactory(): SearchModelFactory
 }
@@ -27,22 +31,22 @@ interface SearchComponent {
 @Retention(AnnotationRetention.RUNTIME)
 annotation class SearchScope
 
-interface RepositoryDeps {
+interface SearchDeps {
     val repository: VacancyRepository
 }
 
-interface RepositoryDepsProvider {
+interface SearchDepsProvider {
 
     @get:RestrictTo(RestrictTo.Scope.LIBRARY)
-    val deps: RepositoryDeps
+    val deps: SearchDeps
 
-    companion object : RepositoryDepsProvider by RepositoryDepsStore
+    companion object : SearchDepsProvider by SearchDepsStore
 }
 
-object RepositoryDepsStore : RepositoryDepsProvider {
-    override var deps: RepositoryDeps by notNull()
+object SearchDepsStore : SearchDepsProvider {
+    override var deps: SearchDeps by notNull()
 }
 
 internal class SearchComponentViewModel : ViewModel() {
-    val newSearchComponent = DaggerSearchComponent.factory().create(RepositoryDepsProvider.deps)
+    val newSearchComponent = DaggerSearchComponent.factory().create(SearchDepsProvider.deps)
 }

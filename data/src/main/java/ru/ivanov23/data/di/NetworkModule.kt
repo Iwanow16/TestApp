@@ -7,8 +7,8 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
-import ru.ivanov23.data.remote.api.ApiService
-import ru.ivanov23.data.remote.api.interceptors.MockInterceptor
+import ru.ivanov23.data.source.remote.api.ApiService
+import ru.ivanov23.data.source.remote.api.interceptors.MockInterceptor
 import javax.inject.Singleton
 
 @Module

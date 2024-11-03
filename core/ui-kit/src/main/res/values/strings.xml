@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="response">Откликнуться</string>
+
+    <string name="viewers_count_text">Сейчас просматривает %1$d %2$s</string>
+    <string name="human_form_one">человек</string>
+    <string name="human_form_few">человека</string>
+    <string name="human_form_many">человек</string>
+
+    <string name="published_date">Опубликовано %1$s</string>
+    <string name="vacancy_count">%1$d %2$s</string>
+    <string name="filter_type">По соответствию</string>
+
+    <string name="favorite_title">Избранное</string>
+    <string name="more_vacancies">%1$d %2$s</string>
+    <string name="vacancy_form_one">вакансия</string>
+    <string name="vacancy_form_few">вакансии</string>
+    <string name="vacancy_form_many">вакансий</string>
+</resources>

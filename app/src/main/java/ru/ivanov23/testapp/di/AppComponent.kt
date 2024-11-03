@@ -7,8 +7,10 @@ import ru.ivanov23.data.di.DatabaseModule
 import ru.ivanov23.data.di.NetworkModule
 import ru.ivanov23.data.di.RepositoryModule
 import ru.ivanov23.domain.repository.VacancyRepository
-import ru.ivanov23.search.di.RepositoryDeps
-import ru.ivanov23.testapp.MainActivity
+import ru.ivanov23.favorites.di.FavouriteDeps
+import ru.ivanov23.search.di.SearchDeps
+import ru.ivanov23.testapp.main.MainActivity
+import ru.ivanov23.testapp.main.viewmodel.MainViewModelFactory
 import javax.inject.Singleton
 
 @Singleton
@@ -16,10 +18,10 @@ import javax.inject.Singleton
     modules = [
         NetworkModule::class,
         DatabaseModule::class,
-        RepositoryModule::class
+        RepositoryModule::class,
     ]
 )
-interface AppComponent: RepositoryDeps {
+interface AppComponent : SearchDeps, FavouriteDeps {
 
     override val repository: VacancyRepository
 
@@ -29,4 +31,6 @@ interface AppComponent: RepositoryDeps {
     }
 
     fun inject(activity: MainActivity)
+
+    fun viewModelFactory(): MainViewModelFactory
 }

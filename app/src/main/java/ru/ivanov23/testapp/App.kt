@@ -2,7 +2,8 @@ package ru.ivanov23.testapp
 
 import android.app.Application
 import android.content.Context
-import ru.ivanov23.search.di.RepositoryDepsStore
+import ru.ivanov23.favorites.di.FavoriteDepsStore
+import ru.ivanov23.search.di.SearchDepsStore
 import ru.ivanov23.testapp.di.AppComponent
 import ru.ivanov23.testapp.di.DaggerAppComponent
 
@@ -13,7 +14,9 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        RepositoryDepsStore.deps = appComponent
+
+        SearchDepsStore.deps = appComponent
+        FavoriteDepsStore.deps = appComponent
     }
 }
 

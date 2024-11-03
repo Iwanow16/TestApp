@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.VacancyMainFragment"
+    tools:context=".presentation.fragments.VacancyMainFragment"
     tools:theme="@style/Theme.TestApp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,9 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginVertical="16dp"
-            android:clipToPadding="false"
             android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +68,6 @@
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:orientation="vertical"
-            android:paddingHorizontal="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

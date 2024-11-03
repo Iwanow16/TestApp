@@ -1,12 +1,12 @@
 package ru.ivanov23.search.mapper
 
-import ru.ivanov23.base.adapter.DelegateItem
+import ru.ivanov23.base.adapter.base.DelegateItem
 import ru.ivanov23.domain.models.Offer
 import ru.ivanov23.domain.models.Vacancy
 import ru.ivanov23.search.presentation.adapters.offer.OfferDelegateItem
-import ru.ivanov23.search.presentation.adapters.offer.OfferUi
+import ru.ivanov23.ui_kit.models.OfferUi
 import ru.ivanov23.search.presentation.adapters.vacancy.VacancyDelegateItem
-import ru.ivanov23.search.presentation.adapters.vacancy.VacancyUi
+import ru.ivanov23.ui_kit.models.VacancyUi
 
 fun Vacancy.toUi(): VacancyUi =
     VacancyUi(
@@ -35,16 +35,4 @@ fun Offer.toUi(): OfferUi =
         button = this.button,
         link = this.link,
         title = this.title
-    )
-
-fun OfferUi.toDelegateItem(): DelegateItem =
-    OfferDelegateItem(
-        id = link.hashCode(),
-        value = this
-    )
-
-fun VacancyUi.toDelegateItem(): DelegateItem =
-    VacancyDelegateItem(
-        id = id.hashCode(),
-        value = this
     )

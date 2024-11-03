@@ -10,6 +10,7 @@ java {
 }
 
 dependencies {
+    implementation(libs.coroutines)
     implementation(libs.dagger)
     ksp(libs.dagger.compiler)
 }

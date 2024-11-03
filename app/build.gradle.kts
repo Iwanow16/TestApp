@@ -42,13 +42,16 @@ android {
 dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":core:base"))
+    implementation(project(":core:adapter-delegate"))
     implementation(project(":features:search"))
     implementation(project(":features:favourites"))
+    implementation(project(":features:responses"))
+    implementation(project(":features:messages"))
+    implementation(project(":features:profile"))
 
     implementation(libs.viewbinding)
-
     implementation(libs.dagger)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     ksp(libs.dagger.compiler)
 
     implementation(libs.androidx.core.ktx)

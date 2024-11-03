@@ -4,24 +4,24 @@ import android.content.Context
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
-import ru.ivanov23.data.local.FavoriteDatabase
-import ru.ivanov23.data.local.dao.VacancyDao
+import ru.ivanov23.data.source.local.VacancyDatabase
+import ru.ivanov23.data.source.local.dao.VacancyDao
 import javax.inject.Singleton
 
 @Module
 class DatabaseModule {
     @Provides
     @Singleton
-    fun provideDatabase(context: Context): FavoriteDatabase {
+    fun provideDatabase(context: Context): VacancyDatabase {
         return Room.databaseBuilder(
             context.applicationContext,
-            FavoriteDatabase::class.java,
+            VacancyDatabase::class.java,
             "favorite_database"
         ).build()
     }
 
     @Provides
-    fun provideUserDao(database: FavoriteDatabase): VacancyDao {
+    fun provideUserDao(database: VacancyDatabase): VacancyDao {
         return database.vacancyDao()
     }
 }
