@@ -44,7 +44,7 @@ class VacancyMainFragment : Fragment(R.layout.fragment_vacancy) {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         injectDependencies()
-        setNavigator(context)
+        setNavigator()
     }
 
     override fun onDetach() {
@@ -65,7 +65,7 @@ class VacancyMainFragment : Fragment(R.layout.fragment_vacancy) {
             .inject(this)
     }
 
-    private fun setNavigator(context: Context) {
+    private fun setNavigator() {
         navigator = parentFragment as? SearchNavigator
             ?: throw RuntimeException("Parent fragment must implement SearchNavigator")
     }

@@ -24,7 +24,7 @@ class FavouriteViewModel @Inject constructor(
     fun loadData() {
         viewModelScope.launch {
             try {
-                val data = repository.getFavouriteVacancy().collect { data ->
+                repository.getFavouriteVacancy().collect { data ->
                     _state.value = FavoriteState.Success(data.map { it.toUi() })
                 }
             } catch (e: Exception) {
